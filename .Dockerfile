@@ -1,6 +1,6 @@
 # Stage 1: сборка
 FROM node:18 AS builder
-WORKDIR /tk
+WORKDIR /
 COPY package*.json ./
 RUN npm ci --only=production
 COPY . .
