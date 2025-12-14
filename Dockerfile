@@ -4,7 +4,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --only=production
 COPY . .
-RUN npm run build  # ← создаёт папку dist/ или build/
+RUN npm run build  
+# ← создаёт папку dist/ или build/
 
 # Stage 2: лёгкий сервер
 FROM nginx:alpine
